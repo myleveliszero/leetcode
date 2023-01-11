@@ -18,7 +18,7 @@ class Solution:
             
 
 solve = Solution()
-print(solve.minPartitions("56"))
+print(solve.minPartitions("6633256"))
 print(solve.minPartitions("82734"))
 print(solve.version2("342545623492349"))
 print(solve.version3("2356238"))
