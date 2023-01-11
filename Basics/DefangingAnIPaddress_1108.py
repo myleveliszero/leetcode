@@ -1,4 +1,4 @@
-# Status: Good(99/100)
+# Status: Good
 
 class Solution:
     def defangIPaddr(self, address: str) -> str:

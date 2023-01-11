@@ -1,4 +1,4 @@
-# Status: Good(99/100)
+# Status: Good
 
 # Note:
 # Kelvin = Celsius + 273.15

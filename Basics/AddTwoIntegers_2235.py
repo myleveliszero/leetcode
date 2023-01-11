@@ -1,4 +1,4 @@
-# Status: Good(99/100)
+# Status: Good
 
 class Solution:
     def sum(self, num1: int, num2: int) -> int:
