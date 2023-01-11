@@ -13,9 +13,12 @@ class Solution:
         for i in "987654321":
             if i in n:
                 return int(i)
+    def version3(self, n: str) -> int:
+        return int(max(n))
             
 
 solve = Solution()
 print(solve.minPartitions("56"))
 print(solve.minPartitions("82734"))
 print(solve.version2("342545623492349"))
+print(solve.version3("2356238"))
