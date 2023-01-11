@@ -1,4 +1,4 @@
-# Status: Perfect
+# Status: Good(99/100)
 
 # Input: nums = [1,2,1]
 # Output: [1,2,1,1,2,1]  == [1,2,1]+[1,2,1] = [1,2,1,1,2,1]
