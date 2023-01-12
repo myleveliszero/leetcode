@@ -11,3 +11,4 @@
 8. list comprehension 
 9. operator(add,mul,or, ... etc)
 10. HashMap,Map
+11. functools
