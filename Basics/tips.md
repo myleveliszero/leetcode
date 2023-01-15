@@ -12,3 +12,5 @@
 9. operator(add,mul,or, ... etc)
 10. HashMap,Map
 11. functools
+12. Generators, yield
+13. two pointers, four pointers
