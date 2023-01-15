@@ -6,11 +6,12 @@ class Solution:
     def version2(self, s):
         answ = ""
         for char in s:
-            if ord(char) < 90:
+            if 64 < ord(char) < 91:
                 answ += chr(ord(char)+32)
             else:
                 answ += char
         return answ
+
 
 solve = Solution()
 print(solve.toLowerCase("Hello"))
