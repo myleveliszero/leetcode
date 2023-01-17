@@ -1,4 +1,4 @@
-# Status: 
+# Status: Good
 
 class Solution:
     def maxProductDifference(self, nums: list[int]) -> int:
