@@ -11,6 +11,12 @@ class Solution:
                 answ = i+1
                 break
         return answ if n != 1 else n
+    def version2(self, n):
+        nums = [i for i in range(1, n+1)]
+        for i in range(n):
+            if  sum(nums[:i+1]) == sum(nums[i:]):
+                return i+1 
+        return -1
     def funversion(self, n):
         # Funny solution
         if n == 1:
@@ -26,7 +32,8 @@ class Solution:
 
 solve = Solution()
 print(solve.pivotInteger(8))
-print(solve.pivotInteger(288))
+print(solve.version2(288))
+print(solve.version2(8))
 print(solve.pivotInteger(999))
 # temp = []
 # for i in range(1, 1001):
