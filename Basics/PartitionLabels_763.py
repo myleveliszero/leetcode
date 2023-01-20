@@ -36,5 +36,6 @@ class Solution:
         return answ          
 
 solve = Solution()
-# print(solve.partitionLabels("qiejxqfnqceocmy"))
-print(solve.partitionLabels("mlullbhiuiujgvwvurcdvhzdk"))
+print(solve.partitionLabels("qiejxqfnqceocmy")) # [13,1,1]
+print(solve.partitionLabels("mlullbhiuiujgvwvurcdvhzdk")) # [1,23,1]
+print(solve.partitionLabels("ababcbacadefegdehijhklij")) # [9,7,8]
