@@ -6,8 +6,8 @@ class Solution:
         if patterns[i] is substring of word: answ += 1
         """
         answ = 0
-        for i in range(len(patterns)):
-            if patterns[i] in word:
+        for i in patterns: 
+            if i in word:  
                 answ += 1
         return answ
     def version2(self, patterns, word):
