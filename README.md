@@ -1,8 +1,7 @@
 # Leetcode
 
-My journey to programming world!
-
+My journey into the world of programming!
 
 ## Note
---- All solutions are verified by submission to leetcode and accepted.
---- You can check it by finding profile MyLevelsZero on leetcode.
+1. All solutions are verified by submission to leetcode and accepted.
+2. You can check it by finding profile MyLevelsZero on leetcode.
