@@ -1,4 +1,4 @@
-## Some tips:
+## Some tips for myself
 
 ### Find out how works(order doesn't matter):
 1. zip, map, dict, enumerate 
