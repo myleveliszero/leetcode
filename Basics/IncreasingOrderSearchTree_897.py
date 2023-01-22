@@ -34,4 +34,8 @@ six = TreeNode(6)
 root1 = TreeNode(5, left=three, right=six)
 
 solve = Solution()
-print(solve.increasingBST(root=root1))
+res = solve.increasingBST(root=root1)
+while res:
+    print(res.val, end = " ")
+    res = res.right
+print()
