@@ -14,4 +14,4 @@
 11. sortings: counting sort, quick sort
 12. collections: defaultdict
 13. from base_N to base_K 
-14. work on XOR problems
+14. work on XOR, gcd
