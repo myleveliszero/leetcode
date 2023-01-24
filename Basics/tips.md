@@ -13,3 +13,4 @@
 10. two pointers, four pointers
 11. sortings: counting sort, quick sort
 12. collections: defaultdict
+13. from base_N to base_K 
