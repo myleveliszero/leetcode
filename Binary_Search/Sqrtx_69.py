@@ -1,5 +1,6 @@
 # Status: Not Bad
 
+import time
 class Solution:
     # Basic Binary Search
     def mySqrt(self, x: int) -> int:
@@ -23,10 +24,12 @@ class Solution:
                     return i-1
                 else:
                     right = i-1
-
+begin = time.time()
 solve = Solution()
 print(solve.mySqrt(4))
 print(solve.mySqrt(15))
 print(solve.mySqrt(153))
-print(solve.mySqrt(56))
+print(solve.mySqrt(2147483647))
 print(solve.mySqrt(134))
+end = time.time()
+print(f"Execution time: {(end-begin)*1000}")
