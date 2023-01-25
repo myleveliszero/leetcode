@@ -1,4 +1,4 @@
-# Status: Not Bad
+# Status: Good
 
 import time
 class Solution:
@@ -7,23 +7,21 @@ class Solution:
         if x == 0: 
             return 0
         RANGE = 46341
-        nums = [i for i in range(1, RANGE)]
         left, right = 0, RANGE-1
         while left <= right:
             mid = (left + right)//2
-            i = nums[mid]
-            if i*i == x:
-                return i
-            elif i*i < x:
-                if (i+1)*(i+1) > x:
-                    return i
+            if mid*mid == x:
+                return mid
+            elif mid*mid < x:
+                if (mid+1)*(mid+1) > x:
+                    return mid
                 else:
-                    left = i+1
-            elif i*i > x:
-                if (i-1)*(i-1) < x:
-                    return i-1
+                    left = mid+1
+            elif mid*mid > x:
+                if (mid-1)*(mid-1) < x:
+                    return mid-1
                 else:
-                    right = i-1
+                    right = mid-1
 begin = time.time()
 solve = Solution()
 print(solve.mySqrt(4))
