@@ -15,6 +15,8 @@ class Solution:
             return mid
         else:
             return mid + 1
+
+            
     def version2(self, nums, target):
         left, right = 0, len(nums)-1
         while left <= right:
