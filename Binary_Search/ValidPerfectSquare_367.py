@@ -54,7 +54,7 @@ print(solve.Newton(169))
 print(solve.isPSqrtVersion2(153), end = " --> ")
 print(solve.isPSqrtVersion2(169), end = " --> ")
 print(solve.isPSqrtVersion2(2147483647), end = " --> ")
-print(solve.isPSqrtVersion2(1073741824), end = " --> ")
+print(solve.isPSqrtVersion2(1073741824))
 
 print(solve.oddsequence(153), end = " --> ")
 print(solve.oddsequence(169))
