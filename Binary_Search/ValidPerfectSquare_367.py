@@ -11,7 +11,7 @@ class Solution:
                 return True
             elif isperfect < num:
                 left = mid+1
-            elif isperfect >= num:
+            else:               # elif isperfect >= num:    
                 right = mid-1
         return False
     def isPSqrtVersion2(self, num: int) -> bool:
@@ -23,7 +23,7 @@ class Solution:
                 return True
             elif isperfect < num:
                 left = mid+1
-            elif isperfect >= num:
+            else:               # elif isperfect >= num:
                 right = mid-1
         return False
     def Newton(self, num):
