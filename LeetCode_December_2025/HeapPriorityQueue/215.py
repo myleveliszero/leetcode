@@ -1,0 +1,13 @@
+from typing import List
+import heapq as hq
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        hq.heapify(nums)
+        while len(nums) > k:
+            hq.heappop(nums)
+
+        return hq.heappop(nums)
+        
+sol = Solution().findKthLargest
+print(sol(nums = [3,2,3,1,2,4,5,5,6], k = 4
+))
