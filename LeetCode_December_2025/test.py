@@ -38,3 +38,10 @@ print(f"(n << 1) & mask = 0x{shifted:08x}")  # 0xfffffffe
 print(f"n << 1 = {shifted} (0x{shifted:x})")
 print(f"bit_length = {shifted.bit_length()}")  # 32
 # Correct: overflow bit lost, result wraps around
+
+def test(op, input):
+    obj = eval(f"{op[0]}({input[0][0]})")
+    for i in range(1, len(input)):
+        # if not input[i]:
+        #     print(eval(f"obj.{op[i]}()"))
+        print(eval(f"obj.{op[i]}({input[i][0]}, {input[i][1]}, {input[i][2]}, {input[i][3]})"))

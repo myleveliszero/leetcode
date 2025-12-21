@@ -1,6 +1,6 @@
 class Solution:
     def maxRepeating(self, sequence: str, word: str) -> int:
-        def check(sequence, word):
+        def check(sequence, word): # this function works similar to operator "in"
             for idx in range(len(sequence)):
                 if sequence[idx] == word[0]:
                     i, j = idx, 0
