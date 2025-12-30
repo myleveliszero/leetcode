@@ -25,6 +25,20 @@ class Solution:
         lst = []
         postOrderTraverse(root, lst)
         return lst
+    
+    def postorderTraversal_2(self, root: Optional[TreeNode]) -> List[int]:
+        def postOrderTraverse(root, lst):
+            if root is None:
+                return root
+            postOrderTraverse(root.left, lst)
+            postOrderTraverse(root.right, lst)
+            lst.append(root.val)
+
+            return root
+
+        lst = []
+        postOrderTraverse(root, lst)
+        return lst
 
 
 

@@ -1,18 +1,32 @@
 from typing import List
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        global res
-        res = []
-        def backtrack(nums, lst, idx):
-            if idx < len(nums):
-                backtrack(nums, lst.copy(), idx+1)
-                lst.append(nums[idx])
-                backtrack(nums, lst.copy(), idx+1)
-            else:
-                res.append(lst)
+        def backtrack(idx, subsets, curset):
+            if idx >= len(nums):
+                subsets.append(curset)
                 return None
-        backtrack(nums, [], 0)
-        return res 
+            backtrack(idx+1, subsets, curset.copy())
+            curset.append(nums[idx])
+            backtrack(idx+1, subsets, curset.copy())
+        
+        subsets, curset = [], []
+        backtrack(0, subsets, curset)
+        return subsets
 
-sol = Solution().subsets
+    def subsets_2(self, nums: List[int]) -> List[List[int]]:
+        def backtrack(idx, nums, subsets, curset):
+            if idx >= len(nums):
+                subsets.append(curset.copy())
+                return None
+            
+            curset.append(nums[idx])
+            backtrack(idx+1, nums, subsets, curset)
+            curset.pop()
+            backtrack(idx+1, nums, subsets, curset)
+        
+        subsets, curset = [], []
+        backtrack(0, nums, subsets, curset)
+        return subsets
+
+sol = Solution().subsets_2
 print(sol([1,2,3]))

@@ -26,6 +26,20 @@ class Solution:
         preOrderTraverse(root, lst)
         return lst
 
+    def preorderTraversal_2(self, root: Optional[TreeNode]) -> List[int]:
+        def preOrderTraverse(root, lst):
+            if root is None:
+                return root
+            lst.append(root.val)
+            preOrderTraverse(root.left, lst)
+            preOrderTraverse(root.right, lst)
+            
+            return root
+
+        lst = []
+        preOrderTraverse(root, lst)
+        return lst
+
 
 
 tn2 = TreeNode(2)
@@ -35,7 +49,7 @@ tn7 = TreeNode(7)
 tn6 = TreeNode(6, left=tn5, right=tn7)
 root = TreeNode(4, left=tn3, right=tn6)
 
-node = Solution().preorderTraversal(root)
+node = Solution().preorderTraversal_2(root)
 if node:
     print(node)
 else:

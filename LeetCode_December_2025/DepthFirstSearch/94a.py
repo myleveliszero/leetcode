@@ -7,20 +7,42 @@ class TreeNode:
         self.right = right
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        def inOrderTraverse(root, lst):
-            if root is None:
-                return root
-
-            inOrderTraverse(root.left, lst) 
-            lst.append(root.val)
-            inOrderTraverse(root.right, lst)
-  
-            return root
-
-        lst = []
-        inOrderTraverse(root, lst)
-        return lst
-
+        if root is None: return []
+        q, res = [root], []
+        while q:
+            node = q.pop()
+            while node.left:
+                q.append(node)
+                node = node.left
+            
+            res.append(node.val)
+            while q and node.right is None:
+                node = q.pop()
+                res.append(node.val)
+            if node.right is not None:
+                q.append(node.right)       
+            
+        return res
+    
+    def inorderTraversal_2(self, root: Optional[TreeNode]) -> List[int]:
+        if root is None: return []
+        q, res = [root], []
+        while q:
+            node = q.pop()
+            if node.right is not None:
+                q.append(node.right)
+            
+            q.append(node)
+            if node.left is not None:
+                q.append(node.left) 
+            
+            if node.left is None:
+                q.pop()
+                res.append(node.val)
+            node.left = None
+            node.right = None
+        
+        return res
 
 
 tn2 = TreeNode(2)

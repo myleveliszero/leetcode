@@ -25,7 +25,32 @@ class Solution:
         inOrderTraverse(root, lst)
         return lst
 
+    def inorderTraversal_3(self, root: Optional[TreeNode]) -> List[int]:
+        def inOrderTraverse(root, lst):
+            if root is not None:
+                inOrderTraverse(root.left, lst) 
+                lst.append(root.val)
+                inOrderTraverse(root.right, lst)
+                return root
 
+        lst = []
+        inOrderTraverse(root, lst)
+        return lst
+    
+    def inorderTraversal_2(self, root: Optional[TreeNode]) -> List[int]:
+        def inOrderTraverse(root, lst):
+            if root is None:
+                return root
+
+            inOrderTraverse(root.left, lst) 
+            lst.append(root.val)
+            inOrderTraverse(root.right, lst)
+  
+            return root
+
+        lst = []
+        inOrderTraverse(root, lst)
+        return lst
 
 tn2 = TreeNode(2)
 tn3 = TreeNode(3, left=tn2)
@@ -34,7 +59,7 @@ tn7 = TreeNode(7)
 tn6 = TreeNode(6, left=tn5, right=tn7)
 root = TreeNode(4, left=tn3, right=tn6)
 
-node = Solution().inorderTraversal(root)
+node = Solution().inorderTraversal_2(root)
 if node:
     print(node)
 else:

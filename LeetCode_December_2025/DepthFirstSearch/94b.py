@@ -7,16 +7,17 @@ class TreeNode:
         self.right = right
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        def inOrderTraverse(root, lst):
-            if root is not None:
-                inOrderTraverse(root.left, lst) 
-                lst.append(root.val)
-                inOrderTraverse(root.right, lst)
-                return root
-
-        lst = []
-        inOrderTraverse(root, lst)
-        return lst
+        curr = root
+        res, stack = [], []
+        while curr or stack:
+            if curr:
+                stack.append(curr)
+                curr = curr.left
+            else:
+                curr = stack.pop()
+                res.append(curr.val)
+                curr = curr.right
+        return res
 
 
 

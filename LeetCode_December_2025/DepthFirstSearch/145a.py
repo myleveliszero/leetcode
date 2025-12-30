@@ -8,18 +8,25 @@ class TreeNode:
 
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        def postOrderTraverse(root, lst):
-            if root is None:
-                return root
-            postOrderTraverse(root.left, lst)
-            postOrderTraverse(root.right, lst)
-            lst.append(root.val)
+        curr = root
+        res, stack, visit = [], [], set()
+        while curr or stack:
+            if curr:
+                stack.append(curr)
+                curr = curr.left
+            else:
+                curr = stack.pop()
+                if curr.right is None or curr in visit:
+                    res.append(curr.val)
+                    curr = None
+                    continue
+                if curr.right is not None:
+                    stack.append(curr)
+                    visit.add(curr)
+                    curr = curr.right
 
-            return root
-
-        lst = []
-        postOrderTraverse(root, lst)
-        return lst
+        return res
+            
 
 
 
