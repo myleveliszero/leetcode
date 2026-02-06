@@ -1,4 +1,4 @@
 # Leetcode
+Everything started when I realized that most of the time I try to dodge coding interviews. And I always tried to runaway from coding interviews, so now I am already tired running away from this problem(coding interviews). In 2023 I started solving LeetCode problems but never was interested in improving Time Complexity or Space complexity and always looked for easy problems, because I was in my comfort zone and don't wanted to learn new algorithms and data structures, but from November 2025 I started learning DSA(Data Structures and Algorithms) and currently still learning.  I already covered a lot of topics like: arrays, two-pointers, linked-lists, sorting, recursion, binary search, trees, hash-tables, backtracking, graphs, dp, so on. But I want a solid foundation in each topic, so now need to practice, practice, practice. 
 
-My journey into the world of programming! nickname in leetcode MyLevelsZero
-2025
+Good luck to everyone in their journey to getting better in DSA [💪,👍,🌟,🍀]
